@@ -1,0 +1,66 @@
+body {
+  /* 기본(공통) 스타일 */
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+}
+img{
+  /* display: block; */
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+header {
+  background-color: pink;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+header .main-menu {
+  display: flex;
+  align-items: center;
+}
+header .main-menu a:hover {
+  color: #387FAF;
+}
+
+.item {
+  padding: 50px 20px;
+  
+}
+
+header .item a {
+  padding: 30px;
+}
+
+
+header .item__contents {
+  /* text-align: center; */
+}
+header .item img {
+  margin-right: 5px;
+}
+
+header .main-menu .item .item__contents > li {
+  /* display: none; */
+  position: fixed;
+  /* width: 100%; */
+  /* left: 0; */
+}
+header .item:hover .item__contents li{
+  display: block;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-content: center; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+}
