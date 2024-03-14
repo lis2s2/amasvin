@@ -3,7 +3,7 @@ new Swiper('.promotion .swiper', {
   direction: 'horizontal', // 수평 슬라이드(기본값)
   loop: true, // 반복 재생 여부, 1 -> 2 -> 3 -> 4 -> 다시 1
   autoplay: { // 자동 재생 여부
-    delay: 2000 // 5초마다슬라이드 바뀜(기본값: 3000)
+    delay: 4000 // 5초마다슬라이드 바뀜(기본값: 3000)
   },
   slidesPerView: 1, // 한 번에 보여줄 슬라이드 개수(기본값: 1) 
   spaceBetween: 10, // 슬라이드 사이 여백(간격) px
