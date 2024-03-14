@@ -108,6 +108,31 @@ header .snsic4:hover {
   height: 100%;
 }
 
+/* 메인배너 내 텍스트 */
+.promotion .swiper-slide {
+  position: relative;
+}
+.promotion .swiper-slide .banner_text {
+  position: absolute;
+  bottom: 150px;
+  left: 100px;
+  width: 100%;
+  text-align: start;
+  color: white;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px #000;
+}
+.promotion .swiper-slide .banner_text h2 {
+  font-size: 45px;
+}
+.promotion .swiper-slide .banner_text h3 {
+  font-size: 25px;
+}
+.promotion .swiper-slide .banner_text p {
+  font-size: 16px;
+  padding-top: 20px;
+}
+
 
 /* FOOTER */
 footer {
@@ -143,4 +168,25 @@ footer .copyright {
 }
 footer .info .lofo {
   margin: 30px auto 0;
+}
+
+/* 가맹문의 ic */
+.franchise {
+  width: 100px;
+  /* background-color: #333; */
+  /* color: #fff; */
+  /* border: 2px solid #fff; */
+  /* border-radius: 10px; */
+  cursor: pointer;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  /* position: fixed; */
+  /* bottom: 30px;
+  right: 30px; */
+  z-index: 9;
+  /* opacity: 0; */
+}
+.franchise a .franchise_ic {
+  position: fixed;
 }
