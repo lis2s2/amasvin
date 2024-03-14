@@ -16,8 +16,17 @@
   <!-- 그 외 fontawesome, bootstrap icon 등 -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 
+  <!-- SWIPER CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
   <!-- CSS -->
   <link rel="stylesheet" href="/CSS/main.css">
+
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!--main.js -->
+  <script defer src="./JS/main.js"></script>
 
 </head>
 <body>
@@ -32,23 +41,23 @@
     <!-- 메인메뉴 -->
     <div class="main-menu">
       <ul class="item">
-        <a href="javascript:void(0)" class="item__name">BRAND</a>
-        <div class="item__contents">
-          <li>BI</li>
-          <li>재료</li>
-          <li>캐릭터</li>
-        </div>
-      </ul>
-      <ul class="item">
+        <li>
+          <a href="javascript:void(0)" class="item__name">BRAND</a>
+          <div class="item__contents">
+            <ul>
+              <li>BI</li>
+              <li>재료</li>
+              <li>캐릭터</li>
+            </ul>
+          </div> 
+        </li>
+      <li class="item">
         <a href="javascript:void(0)" class="item__name">MENU</a>
-      </ul>
-      <ul class="item">
+      <li class="item">
         <a href="javascript:void(0)" class="item__name">MEMBERSHIP</a>
-      </ul>
-      <ul class="item">
+      <li class="item">
         <a href="javascript:void(0)" class="item__name">가맹문의</a>
-      </ul>
-      <ul class="item">
+      <li class="item">
         <a href="javascript:void(0)" class="item__name">고객문의</a>
       </ul>
     
@@ -63,25 +72,52 @@
     </div>
   </header>
 
-  <!-- PROMOTION -->
+  <!-- 메인배너 -->
   <section class="promotion">
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="./img/main_banner.jpg" alt="">
-          <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          <a href="javascript:void(0)"><img src="./img/main_banner.jpg" alt=""></a>
         </div>
         <div class="swiper-slide">
-          <img src="./img/main_banner1.jpg" alt="">
-          <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          <a href="javascript:void(0)"><img src="./img/main_banner1.jpg" alt=""></a>
         </div>
         <div class="swiper-slide">
-          <img src="./img/main_banner2.jpg" alt="">
-          <a href="javascript:void(0)" class="btn">자세히 보기</a>
+          <a href="javascript:void(0)"><img src="./img/main_banner2.jpg" alt=""></a>
         </div>
       </div>
     </div>
 
+    <!-- <div class="swiper-pagination"></div>
+    
+    <div class="swiper-button-prev">
+      <span class="material-icons">arrow_back</span>
+    </div>
+    <div class="swiper-button-next">
+      <span class="material-icons">arrow_forward</span>
+    </div> -->
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="info">
+      <img src="./img/footer_logo.png" alt="" class="logo">
+      <p>전국 가맹문의:1899-8608
+        <span>서울,경기,충청도 가맹문의:1899-8603</span>
+      </p>
+      <p>사업자등록번호 201-81-21515
+        <span>(주)비케이컴퍼니 대표이사 이수현</span>
+        <span>부산 진구 중앙대로 666번길 17 8층</span>
+      </p>
+      <p>TEL: 1899-8608
+        <span>amasvin_sns@naver.com</span>
+      </p>
+    </div>
+    <div class="copyright">
+      &copy; <span class="this"></span>
+      BKC CO.LTD ALL Rights Reserved
+    </div>
+  </footer>
 
 </body>
 </html>
