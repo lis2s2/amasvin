@@ -30,51 +30,60 @@
   <!-- SWIPER JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+  <!-- GSAP -->
+  <!-- 순서 주의(main.js에서 사용하니까 더 앞에) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- youtube.js -->
+  <script defer src="js/youtube.js"></script>
+
   <!--main.js -->
   <script defer src="./JS/main.js"></script>
 
 </head>
 <body>
   <header>
-    <div class="item">
+    <div class="flex-center">
       <!-- 왼쪽 상단 로고 -->
-        <a href="./index.html" class="logo">
-          <img src="./img/main_logo.png" alt="amaSvin">
-        </a>
+      <a href="./index.html" class="logo">
+        <img src="./img/main_logo.png" alt="amaSvin">
+      </a>
     </div>
 
     <!-- 메인메뉴 -->
-    <div class="main-menu">
-      <ul class="item">
+    <nav class="main-menu">
+      <ul class="flex-center">
         <li>
           <a href="javascript:void(0)" class="item__name">BRAND</a>
-          <div class="item__contents">
-            <ul>
-              <li>BI</li>
-              <li>재료</li>
-              <li>캐릭터</li>
-            </ul>
-          </div> 
+          <ul>
+            <li>BI</li>
+            <li>재료</li>
+            <li>캐릭터</li>
+          </ul>
         </li>
-      <li class="item">
+      <li>
         <a href="javascript:void(0)" class="item__name">MENU</a>
-      <li class="item">
+      </li>
+      <li>
         <a href="javascript:void(0)" class="item__name">MEMBERSHIP</a>
-      <li class="item">
+      </li>
+      <li>
         <a href="javascript:void(0)" class="item__name">가맹문의</a>
-      <li class="item">
+      </li>
+      <li>
         <a href="javascript:void(0)" class="item__name">고객문의</a>
+      </li>
       </ul>
     
 
     <!-- 오른쪽 상단 sns -->
-      <div class="item">
-        <img src="./img/sns_ic1.png" alt="" class="snsic1">
-        <img src="./img/sns_ic2.png" alt="" class="snsic2">
-        <img src="./img/sns_ic3.png" alt="" class="snsic3">
-        <img src="./img/sns_ic4.png" alt="" class="snsic4">
+      <div class="flex-center">
+        <img src="./img/sns_ic1.png" alt="" class="snsic">
+        <img src="./img/sns_ic2.png" alt="" class="snsic">
+        <img src="./img/sns_ic3.png" alt="" class="snsic">
+        <img src="./img/sns_ic4.png" alt="" class="snsic">
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- 메인배너 -->
@@ -82,9 +91,7 @@
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div class="banner_img">
             <img src="./img/main_banner.jpg" alt="">
-          </div>
             <!-- 메인배너 내 텍스트 -->
           <div class="banner_text">
             <h2>amaSvin<br>Bubble Tea&Coffee</h2>
@@ -93,9 +100,7 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="banner_img">
             <img src="./img/main_banner1.jpg" alt="">
-          </div>
           <div class="banner_text">
             <h2>amaSvin<br>Bubble Tea&Coffee</h2>
             <h3>SINCE 2008</h3>
@@ -103,9 +108,7 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="banner_img">
             <img src="./img/main_banner2.jpg" alt="">
-          </div>
           <div class="banner_text">
             <h2>ROASTERY</h2>
             <p>자체 블렌딩 개발을 통해
@@ -179,6 +182,25 @@
     </div>
   </section>
 
+  <!-- YOUTUBE -->
+  <section class="youtube">
+    <!-- 영상이 출력될 영역 -->
+    <div class="youtube__area">
+      <!-- 실제 영상이 재생될 요소 -->
+      <div id="player"></div>
+    </div>
+  </section>
+
+  <!-- 배달 -->
+  <section class="delivery">
+    <img src="./img/delivery_img.png" alt="" class="del_bg">
+    <img src="./img/delivery_img1.png" alt="" class="del_1">
+    <img src="./img/delivery_img2.png" alt="" class="del_2">
+    <img src="./img/delivery_img3.png" alt="" class="del_3">
+    <a href="javascript:void(0)">주문하러가기
+      <!-- <button type="button" class="del_btn">주문하러가기</button> -->
+    </a>
+  </section>
 
   <!-- FOOTER -->
   <footer>
@@ -201,18 +223,14 @@
     </div>
   </footer>
 
-  <!-- 가맹문의 ic
-  <div id="franchise">
-    Tip! a태그와 css 속성을 사용한 최상단 이동 버튼 구현
-    <a href="javascript:void(0)">
-      <img src="./img/franchise_ic.png" alt="" class="franchise_ic">
-    </a> -->
   <!-- 가맹문의 ic -->
   <div id="franchise">
     <!-- Tip! a태그와 css 속성을 사용한 최상단 이동 버튼 구현 -->
-  <a href="javascript:void(0)">
-    <img src="./img/franchise_ic.png" alt="" class="franchise_ic">
-  </a>
+    <div class="franchise_ic">
+      <a href="javascript:void(0)">
+        <img src="./img/franchise_ic.png" alt="" class="franchise__ic">
+      </a>
+    </div>
   </div>
 </body>
 </html>

@@ -25,88 +25,81 @@ header {
   justify-content: center;
   align-content: center;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  /* box-sizing: border-box; */
 }
 
-header .item a {
-  padding: 50px;
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px 0; */
+}
+header .flex-center a {
+  padding: 40px 50px;
+}
+header .flex-center a.logo {
+  padding: 22px 50px;
+}
+header .flex-center img.snsic {
+  /* display: flex; */
+  margin-right: 5px;
+}
+header .flex-center img.snsic:hover  {
+  cursor: url('../img/ribon.png')32 32, auto;
 }
 
 /* 메인메뉴 */
 header .main-menu {
   display: flex; 
   z-index: 1;
-  position: relative;
+  position: relative;  
 }
-header .item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* padding: 20px 0; */
-}
-header .main-menu > li > a {
+header .main-menu .flex-center .item__name ul li {
   display: block;
   padding: 0 10px 20px;
   /* font-family: Arial, sans-serif; */
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 700;
   color: #000;
   box-sizing: border-box;
 }
-header .main-menu .item__name:hover {
-  color: #387FAF;
-  /* display: block; */
-}
-header .main-menu  .item .item__contents {
+header .main-menu  .flex-center ul {
   position: fixed;
   display: none;
-}
-header .main-menu .item li:first-child:hover .item__contents {
-  display: block;
-  background-color: white;
-  width: 140px;
-  /* text-align: center; */
-  /* padding: 15px; */
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  padding-top: 40px;
-}
-header .main-menu .item .item__contents li {
-  cursor: pointer;
-  width: 100%;
-  /* height: 100%; */
-  padding: 15px;
   text-align: center;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-header .main-menu .item .item__contents li:hover {
-  background-color: #387FAF;
   width: 140px;
+  background-color: white;
+  margin-top: 39px;
 }
-
-/* 오른쪽 상단 sns icon */
-header .item img {
-  /* display: flex; */
-  margin-right: 5px;
+header .main-menu .flex-center ul > li {
+  padding: 14px 0;
 }
-header .snsic1:hover,
-header .snsic2:hover,
-header .snsic3:hover,
-header .snsic4:hover {
-  cursor: url('../img/ribon.png')32 32, auto;
+header .main-menu .flex-center li:first-child:hover ul {
+  display: block;
+}  
+header .main-menu .flex-center .item__name:hover {
+  color: #387FAF;
+}
+header .main-menu .flex-center ul li:hover {
+  background-color: #387FAF;
+  color: white;
+  width: 140px;
 }
 
 /* 프로모션 */
 .promotion {
+  width: 100%;
   height: 100%;
+  /* height: 880px; */
   background-color: #f6f5ef;
   position: relative; /* 페이지네이션 요소 배치를 위해  */
   transition: height 0.3s;
+  margin-top: 100px;
 }
 .promotion img {
+  /* margin-top: 90px; */
   width: 100%;
-  height: 100%;
+  height: 880px;
 }
 
 /* 메인배너 내 텍스트 */
@@ -136,8 +129,9 @@ header .snsic4:hover {
 
 /* 이벤트 */
 .event {
+  overflow: hidden;
   width: 100%;
-  height: 900px;
+  height: 880px;
   background-color:white;
   position: relative; /* 페이지네이션 요소 배치를 위해  */
   transition: height 0.3s;
@@ -145,13 +139,8 @@ header .snsic4:hover {
 .event img {
   position: absolute;
   width: 540px;
-  /* height: 100%; */
-  /* display: flex;
-  justify-content: center;
-  align-content: center; */
-  /* position: absolute; */
   left: 50%;
-  top: 200px
+  top: 200px;
 }
 
 /* 이벤트메뉴 내 텍스트 */
@@ -211,7 +200,60 @@ header .snsic4:hover {
   padding: 15px;
 }
 
+/* 유튜브 */
+/* YOUTUBE */
+.youtube {
+  position: relative; /* 부모에 위치 기준 */
+  height: 880px;
+  background-color: #333;
+  overflow: hidden; /* 영상 출력 넘치는 부분 숨기기 */
 
+  /* 정가운데 배치 방법1 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.youtube .youtube__area {
+  width: 1280px;
+  height: 720px;
+}
+#player {
+  /* 부모 영역에 가득 차도록 지정 */
+  width: 100%;
+  height: 100%;
+}
+
+/* 배달 */
+.delivery {
+  background-color: white;
+  width: 100%;
+  height: 665px;
+  position: relative;
+  display: block;
+}
+.delivery .del_bg {
+  position: absolute;
+  top: 50px;
+  right: 25%;
+}
+.delivery .del_1 {
+  position: absolute;
+  top: calc(100% - 80%);
+  left: calc(100% - 75%);
+}
+.delivery .del_2 {
+  position: absolute;
+  top: calc(100% - 92%);
+  left: calc(100% - 65%);
+}
+.delivery .del_3 {
+  position: absolute;
+  top: calc(100% - 80%);
+  left: calc(100% - 55%);
+}
+.delivery .a {
+
+}
 
 /* FOOTER */
 footer {
@@ -219,6 +261,7 @@ footer {
   border-top: 1px solid #333;
   text-align: center;
   position: relative;
+  border-top: 1px solid black;
 }
 footer .info {
   margin-top: 10px;
@@ -251,10 +294,15 @@ footer .info .lofo {
 }
 
 /* 가맹문의 ic */
-.franchise {
+#franchise {
   display: block;
+
   /* width: 100%; */
 }
-.franchise a {
-  width: 500px;
+#franchise .franchise_ic {
+  width: 114px;
+  position: fixed;
+  right: 50px;
+  bottom: 70px;
+  z-index: 1;
 }
