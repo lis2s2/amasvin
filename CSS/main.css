@@ -139,8 +139,13 @@ header .main-menu .flex-center ul li:hover {
 .event img {
   position: absolute;
   width: 540px;
-  left: 45%;
+  left: calc(100% / 2);
   top: 200px;
+}
+.event .swiper-pagination {
+  position: absolute;
+  bottom: 40px;
+  z-index: 1;
 }
 
 /* 이벤트메뉴 내 텍스트 */
@@ -151,7 +156,7 @@ header .main-menu .flex-center ul li:hover {
   position: absolute;
   /* position: relative; */
   padding-top: 250px;
-  padding-left: calc(100% / 6);
+  padding-left: calc(100% / 4);
   width: 540px;
   font-family: "Jua", sans-serif;
   /* font-weight: 400;
@@ -183,7 +188,7 @@ header .main-menu .flex-center ul li:hover {
   display: block;
   position: absolute;
   padding-top: 600px;
-  padding-left: calc(100% / 6);
+  padding-left: calc(100% / 4);
 }
 .event .swiper_event .btn_menu .btn__menu {
   border-radius: 20px;
@@ -197,7 +202,6 @@ header .main-menu .flex-center ul li:hover {
 }
 
 /* 유튜브 */
-/* YOUTUBE */
 .youtube {
   position: relative; /* 부모에 위치 기준 */
   height: 880px;
@@ -277,111 +281,79 @@ header .main-menu .flex-center ul li:hover {
   font-weight: 700;
   padding-right: 20px;
 }
-.delivery .best_menu .toggle-menu {
-  /* padding-left: 10px; */
-}
+/* .delivery .best_menu .toggle-menu {
+  padding-left: 10px;
+} */
 .delivery .best_menu .toggle-menu .material-icons {
   font-size: 30px;
 }
 
 /* 추천메뉴 */
-/* .best {
-  overflow: hidden;
-  width: 100%;
-  height: 880px;
-  background-color:white;
-  position: relative;
-  transition: height 0.3s;
-}
-.best img {
-  position: absolute;
-  width: 540px;
-} */
-.promotion {
-  height: 663px;
-  background-color: #f6f5ef;
+.best {
+  height: 200px;
+  background-color: white;
   display: flex;
-  justify-content: center; /* 슬라이드 수평 가운데 정렬 */
-  position: relative; /* 페이지네이션 요소 배치를 위해  */
-  transition: height 0.4s;
+  justify-content: center;
+  position: relative;
+  transition: height 0.2s;
 }
-.promotion.hide {
-  /* display: none; */
+.best .hide {
   height: 0;
   overflow: hidden;
 }
-.promotion .swiper {
-  /* 이미지(819px) 슬라이드 3개 + 사이 여백(10px) 2개 = 2477px */
-  /* width: 2477px; */
-  width: calc(819px * 3 + 10px * 2);
-  /* 활용 예시: width: clac(100% - 120px); */
-  height: 553px;
-  /* Flex Item인 .swiper가 2477px을 유지하기 위해 감소 너비 비율을 0으로 */
+.best .swiper {
+  width: calc(370px * 5);
   flex-shrink: 0;
 }
-.promotion .swiper-slide {
-  /* 모든 슬라이드는 반투명하게, active 한 것만 불투명하게 */
+.best .swiper-slide {
   opacity: 0.5;
   transition: opacity 1s;
 }
-.promotion .swiper-slide-active {
+.best .swiper-slide-active {
   opacity: 1;
 }
-.promotion .swiper-slide .btn {
+.best .swiper-slide img {
+  height: 180px;
+}
+.best .swiper-slide .best__img {
   position: absolute;
   bottom: 0;
-  /* absolute 요소의 수평 가운데 배치 */
   right: 0;
   left: 0;
   margin: 0 auto;
 }
-.promotion .swiper-pagination {
-  position: absolute;
-  bottom: 40px;
-  /* 헤더의 z-index가 9이기 때문에 1로 덮어씌움 아니면 헤더를 10보다 크게 해도 됨 */
-  z-index: 1;
+.best .swiper-pagination {
+  display: none;
 }
-.promotion .swiper-pagination .swiper-pagination-bullet {
-  /* 기존 배경색은 투명하게 숨기고. 배경 이미지를 사용 */
-  background-color: transparent;
-  background-image: url(../images/promotion_slide_pager.png);
-  width: 13px;
-  height: 12px;
-}
-.promotion .swiper-pagination .swiper-pagination-bullet-active {
-  background-image: url(../images/promotion_slide_pager_on.png);
-}
-
-.promotion .swiper-button-prev,
-.promotion .swiper-button-next {
+.best .swiper-button-prev,
+.best .swiper-button-next {
   width: 42px;
   height: 42px;
-  border: 2px solid #333;
+  border: 2px solid pink;
   border-radius: 50%;
   position: absolute;
-  top: 300px;
-  z-index: 1;
-  color: #333;
-  transition: 0.4s;
-}
-.promotion .swiper-button-prev {
-  /* 가운데로 몰아넣고 마진으로 위치 조정 */
-  left: 50%;
-  margin-left: -480px;
-}
 
-.promotion .swiper-button-next {
-  /* 가운데로 몰아넣고 마진으로 위치 조정 */
-  right: 50%;
-  margin-right: -480px;
+  z-index: 1;
+  color: pink;
+  transition: 0.2s;
 }
-.promotion .swiper-button-prev:hover,
-.promotion .swiper-button-next:hover {
-  background-color: #333;
+.best .swiper-button-prev {
+  left: 50%;
+  margin-left: -50px;
+  margin-top: 30px;
+}
+.best .swiper-button-next {
+  right: 50%;
+  margin-right: -50px;
+  margin-top: 30px;
+}
+.best .swiper-button-prev:hover,
+.best .swiper-button-next:hover {
+  background-color: pink;
   color: #fff;
 }
-.promotion .swiper-button-prev::after,
-.promotion .swiper-button-next::after {
+.best .swiper-button-prev::after,
+.best .swiper-button-next::after {
   display: none;
 }
 
