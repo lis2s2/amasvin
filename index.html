@@ -12,6 +12,11 @@
   <!-- 스타일 초기화 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
 
+  <!-- 글꼴 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
   <!-- 구글 머티리얼 아이콘: 구글에서 제공하는 머티리얼 스타일의 아이콘, 글자처럼 취급 가능한 장점 -->
   <!-- 그 외 fontawesome, bootstrap icon 등 -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
@@ -110,7 +115,6 @@
         </div>
       </div>
     </div>
-
     <!-- <div class="swiper-pagination"></div>
     
     <div class="swiper-button-prev">
@@ -120,6 +124,61 @@
       <span class="material-icons">arrow_forward</span>
     </div> -->
   </section>
+
+  <!-- 이벤트 메뉴 -->
+  <section class="event">
+    <div class="swiper_event">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="event_img">
+            <img src="./img/event1.png" alt="">
+          </div>
+          <div class="event_text">
+            <h3>BLACK SUGAR</h3>
+            <span>흑당 버블티</span>
+            <p>대만 야시장에서 온<br>오리지널 흑당</p>
+          </div>
+          <div class="btn_menu">
+            <button type="button" class="btn__menu">
+              <a href="javascript:void(0)" class="btn"></a>메뉴더보기>
+            </button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="event_img">
+            <img src="./img/event3.png" alt="">
+          </div>
+          <div class="event_text">
+            <h3>BOTTLE</h3>
+            <span>1L 대용량 보틀</span>
+            <p>"더 크게,<br>더 맛있게!"</p>
+          </div>
+          <div class="btn_menu">
+            <button type="button" class="btn__menu">
+              <a href="javascript:void(0)" class="btn"></a>메뉴더보기>
+            </button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="event_img">
+            <img src="./img/event5.png" alt="">
+          </div>
+          <div class="event_text">
+            <h3>Berry Holic</h3>
+            <span>봄 신메뉴</span>
+            <p>지금 바로 아마스빈에서<br>봄의 맛을 느껴보세요!</p>
+          </div>
+          <div class="btn_menu">
+            <button type="button" class="btn__menu">
+              <a href="javascript:void(0)" class="btn"></a>메뉴더보기>
+            </button>
+          </div>
+        </div> 
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
 
   <!-- FOOTER -->
   <footer>
@@ -142,13 +201,12 @@
     </div>
   </footer>
 
-  <!-- 가맹문의 ic -->
+    <!-- 가맹문의 ic -->
   <div id="franchise">
     <!-- Tip! a태그와 css 속성을 사용한 최상단 이동 버튼 구현 -->
     <a href="javascript:void(0)">
       <img src="./img/franchise_ic.png" alt="" class="franchise_ic">
     </a>
   </div>
-
 </body>
 </html>
