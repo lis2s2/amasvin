@@ -139,7 +139,7 @@ header .main-menu .flex-center ul li:hover {
 .event img {
   position: absolute;
   width: 540px;
-  left: 50%;
+  left: 45%;
   top: 200px;
 }
 
@@ -151,7 +151,7 @@ header .main-menu .flex-center ul li:hover {
   position: absolute;
   /* position: relative; */
   padding-top: 250px;
-  padding-left: calc(100% / 4);
+  padding-left: calc(100% / 6);
   width: 540px;
   font-family: "Jua", sans-serif;
   /* font-weight: 400;
@@ -183,7 +183,7 @@ header .main-menu .flex-center ul li:hover {
   display: block;
   position: absolute;
   padding-top: 600px;
-  padding-left: calc(100% / 4);
+  padding-left: calc(100% / 6);
   /* top: 140px;
   left: 500px; */
   /* padding: 10px; */
