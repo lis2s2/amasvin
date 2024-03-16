@@ -321,13 +321,13 @@ header .main-menu .flex-center ul li:hover {
 .best .swiper-slide img {
   height: 180px;
 }
-.best .swiper-slide .best__img {
+/* .best .swiper-slide .best__img {
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
   margin: 0 auto;
-}
+} */
 .best .swiper-pagination {
   display: none;
 }
