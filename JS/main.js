@@ -61,7 +61,7 @@ new Swiper('.best .swiper', {
 },
 });
 
-const bestEl =  document.querySelector('.delivery');
+const bestEl =  document.querySelector('.best');
 const bestToggleBtn =  document.querySelector('.toggle-menu');
 const bestToggleIcon =  promotionToggleBtn.querySelector('.material-icons');
 
@@ -74,3 +74,11 @@ bestToggleBtn.addEventListener('click', function ( ) {
   bestToggleIcon.textContent = 'download';
   }
 });
+
+// 창 
+// function showModal() {
+//   document.getElementById('modal').style.display = 'block';
+// }
+function hideModal() {
+  document.getElementById('modal').style.display = 'none';
+}

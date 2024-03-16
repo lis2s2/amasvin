@@ -156,7 +156,7 @@ header .main-menu .flex-center ul li:hover {
   position: absolute;
   /* position: relative; */
   padding-top: 250px;
-  padding-left: calc(100% / 4);
+  padding-left: calc(100% / 5);
   width: 540px;
   font-family: "Jua", sans-serif;
   /* font-weight: 400;
@@ -188,7 +188,7 @@ header .main-menu .flex-center ul li:hover {
   display: block;
   position: absolute;
   padding-top: 600px;
-  padding-left: calc(100% / 4);
+  padding-left: calc(100% / 5);
 }
 .event .swiper_event .btn_menu .btn__menu {
   border-radius: 20px;
@@ -196,7 +196,7 @@ header .main-menu .flex-center ul li:hover {
   color: white;
   border: 2px solid #333;
   box-sizing: border-box;
-  width: 130px;
+  width: 150px;
   font-size: 17px;
   padding: 15px;
 }
@@ -298,6 +298,12 @@ header .main-menu .flex-center ul li:hover {
   transition: height 0.2s;
 }
 .best .hide {
+  display: none;
+  /* height: 0;
+  overflow: hidden; */
+}
+.promotion.hide {
+  /* display: none; */
   height: 0;
   overflow: hidden;
 }
@@ -306,8 +312,8 @@ header .main-menu .flex-center ul li:hover {
   flex-shrink: 0;
 }
 .best .swiper-slide {
-  opacity: 0.5;
-  transition: opacity 1s;
+  /* opacity: 0.5; */
+  /* transition: opacity 1s; */
 }
 .best .swiper-slide-active {
   opacity: 1;
@@ -332,7 +338,6 @@ header .main-menu .flex-center ul li:hover {
   border: 2px solid pink;
   border-radius: 50%;
   position: absolute;
-
   z-index: 1;
   color: pink;
   transition: 0.2s;
@@ -408,3 +413,18 @@ footer .info .lofo {
   bottom: 70px;
   z-index: 1;
 }
+
+/* 모달창 */
+#modal {
+  position: fixed;
+  width: 500px;
+  height: 600px;
+  top: 40px;
+  left: 100px;
+  border-radius: 6px;
+  background-image: url(../img/popup.jpg);
+  padding: 10px;
+  box-sizing: border-box;
+  background-size: cover; 
+  z-index: 100;
+} 
