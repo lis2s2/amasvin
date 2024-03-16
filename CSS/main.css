@@ -297,10 +297,10 @@ header .main-menu .flex-center ul li:hover {
   position: relative;
   transition: height 0.2s;
 }
-.best .hide {
-  display: none;
-  /* height: 0;
-  overflow: hidden; */
+.best.hide {
+  /* display: none; */
+  height: 0;
+  overflow: hidden;
 }
 .promotion.hide {
   /* display: none; */
@@ -308,12 +308,12 @@ header .main-menu .flex-center ul li:hover {
   overflow: hidden;
 }
 .best .swiper {
-  width: calc(370px * 5);
+  width: calc(300px * 5);
+  /* width: 200px; */
   flex-shrink: 0;
 }
-.best .swiper-slide {
-  /* opacity: 0.5; */
-  /* transition: opacity 1s; */
+.best .swiper img {
+  margin: 0 auto;
 }
 .best .swiper-slide-active {
   opacity: 1;
@@ -321,13 +321,6 @@ header .main-menu .flex-center ul li:hover {
 .best .swiper-slide img {
   height: 180px;
 }
-/* .best .swiper-slide .best__img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-} */
 .best .swiper-pagination {
   display: none;
 }
@@ -403,7 +396,6 @@ footer .info .lofo {
 /* 가맹문의 ic */
 #franchise {
   display: block;
-
   /* width: 100%; */
 }
 #franchise .franchise_ic {
@@ -417,8 +409,8 @@ footer .info .lofo {
 /* 모달창 */
 #modal {
   position: fixed;
-  width: 500px;
-  height: 600px;
+  width: 300px;
+  height: 400px;
   top: 40px;
   left: 100px;
   border-radius: 6px;
@@ -428,3 +420,9 @@ footer .info .lofo {
   background-size: cover; 
   z-index: 100;
 } 
+#modal button:hover {
+  cursor: pointer;
+  background-color: gold;
+  border: 1px solid gold;
+  font-weight: bold;
+}

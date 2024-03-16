@@ -63,7 +63,7 @@ new Swiper('.best .swiper', {
 
 const bestEl =  document.querySelector('.best');
 const bestToggleBtn =  document.querySelector('.toggle-menu');
-const bestToggleIcon =  promotionToggleBtn.querySelector('.material-icons');
+const bestToggleIcon =  bestToggleBtn.querySelector('.material-icons');
 
 bestToggleBtn.addEventListener('click', function ( ) {
   if (bestEl.classList.contains('hide')) {
