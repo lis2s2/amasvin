@@ -68,7 +68,6 @@ header .main-menu {
 header .main-menu .flex-center .item__name ul li {
   display: block;
   padding: 0 10px 20px;
-  font-size: 16px;
   color: #000;
   box-sizing: border-box;
 }
@@ -79,6 +78,8 @@ header .main-menu  .flex-center ul {
   width: 140px;
   background-color: white;
   margin-top: 37px;
+  margin-left: 15px;
+  font-size: 14px;
 }
 header .main-menu .flex-center ul > li {
   padding: 14px 0;
