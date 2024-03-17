@@ -13,7 +13,13 @@ a {
   text-decoration: none;
   color: black;
 }
-header {
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px 0; */
+
+}header {
   background-color: white;
   /* max-width: 1100px; */
   width: 100%;
@@ -27,12 +33,8 @@ header {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   /* box-sizing: border-box; */
 }
-
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* padding: 20px 0; */
+header .flex-center {
+  margin-left: 20px;
 }
 header .flex-center a {
   padding: 40px 50px;
@@ -42,7 +44,7 @@ header .flex-center a.logo {
 }
 header .flex-center img.snsic {
   /* display: flex; */
-  margin-right: 5px;
+  margin: 0 5px;
 }
 header .flex-center img.snsic:hover  {
   cursor: url('../img/ribon.png')32 32, auto;
@@ -52,14 +54,16 @@ header .flex-center img.snsic:hover  {
 header .main-menu {
   display: flex; 
   z-index: 1;
-  position: relative;  
+  position: relative; 
+  /* font-family: "Jua", sans-serif; */
+  font-size: 16px;
+  font-weight: bolder;
 }
 header .main-menu .flex-center .item__name ul li {
   display: block;
   padding: 0 10px 20px;
   /* font-family: Arial, sans-serif; */
   font-size: 16px;
-  font-weight: 700;
   color: #000;
   box-sizing: border-box;
 }
@@ -146,6 +150,9 @@ header .main-menu .flex-center ul li:hover {
   position: absolute;
   bottom: 40px;
   z-index: 1;
+  font-size: 15px;
+  color: black;
+  font-family: "Jua", sans-serif;
 }
 
 /* 이벤트메뉴 내 텍스트 */
@@ -159,8 +166,6 @@ header .main-menu .flex-center ul li:hover {
   padding-left: calc(100% / 5);
   width: 540px;
   font-family: "Jua", sans-serif;
-  /* font-weight: 400;
-  font-style: normal; */
 }
 .event .swiper-slide .event_text h3 {
   font-size: 45px;
@@ -196,9 +201,16 @@ header .main-menu .flex-center ul li:hover {
   color: white;
   border: 2px solid #333;
   box-sizing: border-box;
-  width: 150px;
+  width: 170px;
   font-size: 17px;
   padding: 15px;
+  font-family: "Jua", sans-serif;
+}
+.event .swiper_event .btn_menu .btn__menu:hover {
+  cursor: pointer;
+}
+.event .swiper_event .swiper-pagination-bullet-active {
+  background-color: pink;
 }
 
 /* 유튜브 */
@@ -272,18 +284,16 @@ header .main-menu .flex-center ul li:hover {
 .delivery .best_menu {
   position: absolute;
   display: flex;
-  bottom: 20%;
+  bottom: 15%;
   left: 40%;
   cursor: pointer;
 }
 .delivery .best_menu h2 {
+  font-family: "Jua", sans-serif;
   font-size: 20px;
-  font-weight: 700;
-  padding-right: 20px;
+  font-weight: 500;
+  padding-right: 10px;
 }
-/* .delivery .best_menu .toggle-menu {
-  padding-left: 10px;
-} */
 .delivery .best_menu .toggle-menu .material-icons {
   font-size: 30px;
 }
@@ -322,9 +332,13 @@ header .main-menu .flex-center ul li:hover {
   height: 180px;
 }
 .best .swiper-pagination {
-  display: none;
+  position: absolute;
+  bottom: 0;
 }
-.best .swiper-button-prev,
+.best .swiper .swiper-pagination-bullet-active {
+  background-color: pink;
+}
+/* .best .swiper-button-prev,
 .best .swiper-button-next {
   width: 42px;
   height: 42px;
@@ -334,8 +348,8 @@ header .main-menu .flex-center ul li:hover {
   z-index: 1;
   color: pink;
   transition: 0.2s;
-}
-.best .swiper-button-prev {
+} */
+/* .best .swiper-button-prev {
   left: 50%;
   margin-left: -50px;
   margin-top: 30px;
@@ -344,16 +358,16 @@ header .main-menu .flex-center ul li:hover {
   right: 50%;
   margin-right: -50px;
   margin-top: 30px;
-}
-.best .swiper-button-prev:hover,
+} */
+/* .best .swiper-button-prev:hover,
 .best .swiper-button-next:hover {
   background-color: pink;
   color: #fff;
-}
-.best .swiper-button-prev::after,
+} */
+/* .best .swiper-button-prev::after,
 .best .swiper-button-next::after {
   display: none;
-}
+} */
 
 /* FOOTER */
 footer {
@@ -409,10 +423,10 @@ footer .info .lofo {
 /* 모달창 */
 #modal {
   position: fixed;
-  width: 300px;
-  height: 400px;
-  top: 40px;
-  left: 100px;
+  width: 570px;
+  height: 770px;
+  top: 80px;
+  left: 180px;
   border-radius: 6px;
   background-image: url(../img/popup.jpg);
   padding: 10px;

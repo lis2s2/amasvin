@@ -14,9 +14,13 @@ new Swiper('.event .swiper_event', {
   autoplay: { // 자동 재생 여부
     delay: 3000 // 5초마다슬라이드 바뀜(기본값: 3000)
   },
+  // effect: 'fade',  
+  //   effect: "cards",
+  // grabCursor: true,
   pagination: { // 페이지네이션 번호 사용
     el: '.event .swiper-pagination', // 페이지네이션 번호 요소 선택자
-    clickable: true // 사용자의 페이지네이션 요소 제어 가능 여부
+    // clickable: true // 사용자의 페이지네이션 요소 제어 가능 여부
+    type: "fraction",
   },
 });
 
@@ -52,13 +56,17 @@ new Swiper('.best .swiper', {
   autoplay: {
     delay: 2000 
   },
+  pagination: { // 페이지네이션 번호 사용
+    el: '.best .swiper-pagination', // 페이지네이션 번호 요소 선택자
+    clickable: true // 사용자의 페이지네이션 요소 제어 가능 여부
+  },
   slidesPerView: 5,
   centeredSlides: true,     
 
-  navigation: {
-    nextEl: '.best .swiper-button-next',
-    prevEl: '.best .swiper-button-prev'
-},
+//   navigation: {
+//     nextEl: '.best .swiper-button-next',
+//     prevEl: '.best .swiper-button-prev'
+// },
 });
 
 const bestEl =  document.querySelector('.best');
