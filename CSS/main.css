@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Ownglyph_meetme-Rg';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_meetme-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   /* 기본(공통) 스타일 */
   font-family: "Nanum Gothic", sans-serif;
@@ -56,13 +62,12 @@ header .main-menu {
   z-index: 1;
   position: relative; 
   /* font-family: "Jua", sans-serif; */
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bolder;
 }
 header .main-menu .flex-center .item__name ul li {
   display: block;
   padding: 0 10px 20px;
-  /* font-family: Arial, sans-serif; */
   font-size: 16px;
   color: #000;
   box-sizing: border-box;
@@ -202,9 +207,10 @@ header .main-menu .flex-center ul li:hover {
   border: 2px solid #333;
   box-sizing: border-box;
   width: 170px;
-  font-size: 17px;
-  padding: 15px;
-  font-family: "Jua", sans-serif;
+  font-size: 20px;
+  padding: 10px;
+  /* font-family: "Jua", sans-serif; */
+  font-family: 'Ownglyph_meetme-Rg';
 }
 .event .swiper_event .btn_menu .btn__menu:hover {
   cursor: pointer;
@@ -285,13 +291,14 @@ header .main-menu .flex-center ul li:hover {
   position: absolute;
   display: flex;
   bottom: 10%;
-  left: 40%;
+  left: 35%;
   cursor: pointer;
   color: black;
 }
 .delivery .best_menu h2 {
-  font-family: "Jua", sans-serif;
-  font-size: 20px;
+  /* font-family: "Jua", sans-serif; */
+  font-family: 'Ownglyph_meetme-Rg';
+  font-size: 25px;
   font-weight: 500;
   padding-right: 10px;
 }
@@ -301,7 +308,7 @@ header .main-menu .flex-center ul li:hover {
 
 /* 추천메뉴 */
 .best {
-  height: 200px;
+  height: 225px;
   background-color: white;
   display: flex;
   justify-content: center;

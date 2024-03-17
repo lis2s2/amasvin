@@ -76,10 +76,10 @@ const bestToggleIcon =  bestToggleBtn.querySelector('.material-icons');
 bestToggleBtn.addEventListener('click', function ( ) {
   if (bestEl.classList.contains('hide')) {
   bestEl.classList.remove('hide');
-  bestToggleIcon.textContent = 'upload';
+  bestToggleIcon.textContent = 'thumb_up_off_alt';
   } else {
   bestEl.classList.add('hide');
-  bestToggleIcon.textContent = 'download';
+  bestToggleIcon.textContent = 'thumb_down_off_alt';
   }
 });
 
