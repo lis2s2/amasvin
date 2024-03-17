@@ -287,6 +287,7 @@ header .main-menu .flex-center ul li:hover {
   bottom: 10%;
   left: 40%;
   cursor: pointer;
+  color: black;
 }
 .delivery .best_menu h2 {
   font-family: "Jua", sans-serif;
