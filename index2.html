@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 스타일 초기화 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+  <!-- 글꼴 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+  <!-- 구글 머티리얼 아이콘: 구글에서 제공하는 머티리얼 스타일의 아이콘, 글자처럼 취급 가능한 장점 -->
+  <!-- 그 외 fontawesome, bootstrap icon 등 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+  <!-- SWIPER CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/CSS/main.css">
+
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+  <style>
+    body {
+  /* 기본(공통) 스타일 */
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+}
+img{
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px 0; */
+
+}header {
+  background-color: white;
+  /* max-width: 1100px; */
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  /* box-sizing: border-box; */
+}
+header .flex-center {
+  margin-left: 20px;
+}
+header .flex-center li {
+  /* flex: 1; */
+}
+header .flex-center a {
+  /* width: 100%; */
+  padding: 40px 50px;
+}
+header .flex-center a.logo {
+  padding: 22px 50px;
+}
+header .flex-center img.snsic {
+  /* display: flex; */
+  margin: 0 5px;
+}
+header .flex-center img.snsic:hover  {
+  cursor: url('../img/ribon.png')32 32, auto;
+}
+
+/* 메인메뉴 */
+header .main-menu {
+  display: flex; 
+  z-index: 1;
+  position: relative; 
+  /* font-family: "Jua", sans-serif; */
+  font-size: 18px;
+  font-weight: bolder;
+}
+header .main-menu a {
+  word-break: keep-all;
+}
+header .main-menu .flex-center .item__name ul li {
+  display: block;
+  padding: 0 10px 20px;
+  color: #000;
+  box-sizing: border-box;
+}
+header .main-menu  .flex-center ul {
+  position: fixed;
+  display: none;
+  text-align: center;
+  width: 140px;
+  background-color: white;
+  margin-top: 37px;
+  margin-left: 15px;
+  font-size: 14px;
+}
+header .main-menu .flex-center ul > li {
+  padding: 14px 0;
+}
+header .main-menu .flex-center li:first-child:hover ul {
+  display: block;
+}  
+header .main-menu .flex-center .item__name:hover {
+  color: #387FAF;
+}
+header .main-menu .flex-center ul li:hover {
+  background-color: #387FAF;
+  color: white;
+  width: 140px;
+}
+
+.box {
+  background-color: aquamarine; 
+  margin-top: 150px; 
+  width: 100px; 
+  height: 50px; 
+  padding: 10px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="flex-center">
+      <!-- 왼쪽 상단 로고 -->
+      <a href="./index.html" class="logo">
+        <img src="./img/main_logo.png" alt="amaSvin">
+      </a>
+    </div>
+
+    <!-- 메인메뉴 -->
+    <nav class="main-menu">
+      <ul class="flex-center">
+        <li>
+          <a href="javascript:void(0)" class="item__name">BRAND</a>
+          <ul>
+            <li>BI</li>
+            <li>재료</li>
+            <li>캐릭터</li>
+          </ul>
+        </li>
+      <li>
+        <a href="javascript:void(0)" class="item__name">MENU</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="item__name">MEMBERSHIP</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="item__name">가맹문의</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="item__name">고객문의</a>
+      </li>
+      </ul>
+    
+    <!-- 오른쪽 상단 sns -->
+    <div class="flex-center">
+      <img src="./img/sns_ic1.png" alt="" class="snsic">
+      <img src="./img/sns_ic2.png" alt="" class="snsic">
+      <img src="./img/sns_ic3.png" alt="" class="snsic">
+      <img src="./img/sns_ic4.png" alt="" class="snsic">
+    </div>
+    </nav>
+  </header>
+
+  <!-- 선호 -->
+  <div class="box">
+    <label for="fav">Pick:</label>
+    <select id="fav">
+      <option value="">선택</option>
+      <option value="달달">달달</option>
+      <option value="상큼">상큼</option>
+      <option value="새콤">새콤</option>
+      <option value="새콤">씁쓸</option>
+      <option value="수현's Pick">수현's Pick</option>
+    </select>
+  </div>
+</body>
+</html>
