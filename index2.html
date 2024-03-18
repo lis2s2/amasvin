@@ -127,12 +127,29 @@ header .main-menu .flex-center ul li:hover {
 }
 
 .box {
-  background-color: aquamarine; 
-  margin-top: 150px; 
-  width: 100px; 
-  height: 50px; 
+  /* background-color: aquamarine;  */
+  margin-top: 400px;
+  /* width: 100px;  */
+  height: 55px; 
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-family: "Jua", sans-serif;
+  color: rgb(255, 168, 182);
 }
+button {
+  margin-left: 15px;
+  height: 50px;
+  border-style: none;
+  background-color: azure;
+  border-radius: 50%;
+  font-family: "Jua", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
   </style>
 </head>
 <body>
@@ -179,17 +196,50 @@ header .main-menu .flex-center ul li:hover {
     </nav>
   </header>
 
-  <!-- 선호 -->
+  <!-- 취향 -->
   <div class="box">
-    <label for="fav">Pick:</label>
+    <label for="fav">PICK: 
+      <a href="./img/11.png">
+        <button type="button">수현</button>
+      </a>
+      <a href="./img/v.png">
+        <button type="button" class="like">좋아해</button>
+      </a>
+      <a href="./img/44.png">
+        <button type="button">달달</button>
+      </a>
+      <a href="./img/77.png">
+        <button type="button">상큼</button>
+      </a>
+      <a href="./img/1010.png">
+        <button type="button">새콤</button>
+      </a>
+      <a href="./img/33.png">
+        <button type="button">씁쓸</button>
+      </a>
+    </label>
+
+
+    <!-- <label for="fav">PICK: </label>
     <select id="fav">
-      <option value="">선택</option>
-      <option value="달달">달달</option>
-      <option value="상큼">상큼</option>
-      <option value="새콤">새콤</option>
-      <option value="새콤">씁쓸</option>
+      <button type="menu" style="width: 100px; margin-top: 150px;">좋아해</button>
+      <option value="달달" id="sweet">달달
+        <link rel="stylesheet" href="https://www.amasvin.com/sub/menu.html#character_ic">
+      </option
+      <option value="상큼" id="fresh">상큼</option>
+      <option value="새콤" id="sour">새콤</option>
+      <option value="새콤" id="bitter">씁쓸</option>
       <option value="수현's Pick">수현's Pick</option>
-    </select>
+    </select> -->
   </div>
+
+
+  <!-- <script>
+    const favEl = document.querySelector('.fav');
+    const swEl = document.querySelector('#sweet')
+    swEl.addEventListener('click', function () {
+      swEl
+    })
+  </script> -->
 </body>
 </html>
