@@ -15,7 +15,7 @@ new Swiper('.event .swiper_event', {
     delay: 3000 // 5초마다슬라이드 바뀜(기본값: 3000)
   },
   // effect: 'fade',  
-  //   effect: "cards",
+    // effect: "cards",
   // grabCursor: true,
   pagination: { // 페이지네이션 번호 사용
     el: '.event .swiper-pagination', // 페이지네이션 번호 요소 선택자

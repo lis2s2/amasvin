@@ -42,7 +42,11 @@ a {
 header .flex-center {
   margin-left: 20px;
 }
+header .flex-center li {
+  /* flex: 1; */
+}
 header .flex-center a {
+  /* width: 100%; */
   padding: 40px 50px;
 }
 header .flex-center a.logo {
@@ -321,11 +325,6 @@ header .main-menu .flex-center ul li:hover {
   height: 0;
   overflow: hidden;
 }
-.promotion.hide {
-  /* display: none; */
-  height: 0;
-  overflow: hidden;
-}
 .best .swiper {
   width: calc(300px * 5);
   /* width: 200px; */
@@ -448,4 +447,66 @@ footer .info .lofo {
   background-color: gold;
   border: 1px solid gold;
   font-weight: bold;
+}
+
+/* 모바일 */
+@media screen and (max-width: 767px) {
+  header .logo {
+    margin-left: 40px;
+  }
+  header .main-menu a,
+  header .snsic {
+    display: none;
+  }
+  .promotion .swiper-slide .banner_text {
+    position: absolute;
+    left: 7%;
+  }
+  .event {
+    left: 0%;
+  }
+  .event .event_text {
+    position: absolute;
+    /* left: 10%; */
+    margin: 0 5px;
+  }
+  .event .swiper_event .swiper-wrapper img {
+    /* width: 250px; */
+    display: none;
+  }
+  .event .swiper_event .swiper-wrapper .btn__menu {
+    position: absolute;
+    bottom: 0px;   
+    margin: 0 64px;
+  }
+  .delivery .del_bg {
+    position: absolute;
+    left: 4%;
+  }
+  .delivery .del_1,
+  .delivery .del_2,
+  .delivery .del_3 {
+    display: none;
+  }
+  .best img {
+    width: 40%;
+  }
+  footer .info {
+    width: 369px;
+    margin: 0 auto;
+  }
+  #modal {
+    position: fixed;
+    left: 10%;
+    width: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+/* 태블릿 */
+@media screem and (min-width: 768px) {
+  header {
+    width: 100%;
+  }
 }
