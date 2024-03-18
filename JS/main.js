@@ -12,11 +12,12 @@ new Swiper('.event .swiper_event', {
   direction: 'horizontal', // 수평 슬라이드(기본값)
   loop: true, // 반복 재생 여부, 1 -> 2 -> 3 -> 4 -> 다시 1
   autoplay: { // 자동 재생 여부
-    delay: 3000 // 5초마다슬라이드 바뀜(기본값: 3000)
+    delay: 4000 // 5초마다슬라이드 바뀜(기본값: 3000)
   },
-  // effect: 'fade',  
-    // effect: "cards",
-  // grabCursor: true,
+  effect : 'fade', 
+  fadeEffect: { 
+	crossFade: true 
+  },
   pagination: { // 페이지네이션 번호 사용
     el: '.event .swiper-pagination', // 페이지네이션 번호 요소 선택자
     // clickable: true // 사용자의 페이지네이션 요소 제어 가능 여부
