@@ -505,11 +505,17 @@ footer .info .lofo {
     background-size: contain;
     background-repeat: no-repeat;
   }
+  .franchise__ic {
+    width: 70%;
+    position: absolute;
+    right: -45px;
+    bottom: 40px;
+  }
 }
 
 /* 태블릿 */
-@media screem and (min-width: 768px) {
+/* @media screem and (min-width: 768px) {
   header {
     width: 100%;
   }
-}
+} */
