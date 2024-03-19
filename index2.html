@@ -22,6 +22,10 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/CSS/main.css">
 
+  <!-- GSAP -->
+  <!-- 순서 주의(main.js에서 사용하니까 더 앞에) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <!-- SWIPER JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
@@ -126,7 +130,7 @@ header .main-menu .flex-center ul li:hover {
   width: 140px;
 }
 
-.box {
+.secret {
   /* background-color: aquamarine;  */
   margin-top: 400px;
   /* width: 100px;  */
@@ -149,6 +153,22 @@ button {
   font-size: 20px;
   text-align: center;
 }
+.walkic {
+  position: relative;
+  width: 55px;
+  bottom: 75%;
+  left: 3%;
+  animation-name: turn;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 3;
+}
+
+/* @keyframes turn {
+  0% { transform: rotateY(0deg); }
+  25% { transform: rotateY(-15deg); }
+  100% { transform: rotateY(45deg); }
+} */
 
   </style>
 </head>
@@ -197,13 +217,14 @@ button {
   </header>
 
   <!-- 취향 -->
-  <div class="box">
+  <div class="secret">
+    <img src="./img/apple-touch-ic.png" alt="" class="walkic">
     <label for="fav">PICK: 
       <a href="./img/11.png">
         <button type="button">수현</button>
       </a>
       <a href="./img/v.png">
-        <button type="button" class="like">좋아해</button>
+        <button type="button">좋아해</button>
       </a>
       <a href="./img/44.png">
         <button type="button">달달</button>
@@ -219,6 +240,7 @@ button {
       </a>
     </label>
 
+    
 
     <!-- <label for="fav">PICK: </label>
     <select id="fav">
@@ -233,13 +255,34 @@ button {
     </select> -->
   </div>
 
+<script>
+  // gsap.to(요소, 지속시간, 옵션: {})
+gsap.to('.walkic', 15, {
+  delay: 0.2, // 얼마나 늦게 애니메이션을 시작할 것인지 지연 시간을 설정
+  // x: 1700, 
+  x: 435, 
+  // y: -1000,
+  // 수직으로 얼마나 움직일지 설정, 
+  // transform: translateY(수치); 와 같음
+  // transform: rotateY(45deg),
 
-  <!-- <script>
-    const favEl = document.querySelector('.fav');
-    const swEl = document.querySelector('#sweet')
-    swEl.addEventListener('click', function () {
-      swEl
-    })
-  </script> -->
+  repeat: -1, // 몇 번 반복할지 설정, -1은 무한 반복
+  yoyo: true, // 한 번 재생된 애니메이션을 다시 뒤로 재생
+  ease: Power1.easeOut // 타이밍 함수 적용, 느리게-빠르게-느리게
+});
+gsap.to('.walkic', 0.57, {
+  delay: 0.2, // 얼마나 늦게 애니메이션을 시작할 것인지 지연 시간을 설정
+  // x: 1700, 
+  // y: -15,
+  y: -35,
+  // 수직으로 얼마나 움직일지 설정, 
+  // transform: translateY(수치); 와 같음
+  // transform: rotateY(45deg),
+
+  repeat: -1, // 몇 번 반복할지 설정, -1은 무한 반복
+  yoyo: true, // 한 번 재생된 애니메이션을 다시 뒤로 재생
+  ease: Power1.linear // 타이밍 함수 적용, 느리게-빠르게-느리게
+});
+</script>
 </body>
 </html>
