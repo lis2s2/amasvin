@@ -24,8 +24,8 @@ a {
   justify-content: center;
   align-items: center;
   /* padding: 20px 0; */
-
-}header {
+}
+header {
   background-color: white;
   /* max-width: 1100px; */
   width: 100%;
@@ -50,7 +50,7 @@ header .flex-center a {
   padding: 40px 50px;
 }
 header .flex-center a.logo {
-  padding: 22px 50px;
+  padding: 22px 0;
 }
 header .flex-center img.snsic {
   /* display: flex; */
@@ -72,13 +72,7 @@ header .main-menu {
 header .main-menu a {
   word-break: keep-all;
 }
-header .main-menu .flex-center .item__name ul li {
-  display: block;
-  padding: 0 10px 20px;
-  color: #000;
-  box-sizing: border-box;
-}
-header .main-menu  .flex-center ul {
+header .main-menu .flex-center ul {
   position: fixed;
   display: none;
   text-align: center;
@@ -88,20 +82,23 @@ header .main-menu  .flex-center ul {
   margin-left: 15px;
   font-size: 14px;
 }
-header .main-menu .flex-center ul > li {
-  padding: 14px 0;
-}
-header .main-menu .flex-center li:first-child:hover ul {
+header .main-menu .flex-center ul li {
   display: block;
-}  
-header .main-menu .flex-center .item__name:hover {
-  color: #387FAF;
+  color: #000;
+  box-sizing: border-box;
+  padding: 14px 0;
 }
 header .main-menu .flex-center ul li:hover {
   background-color: #387FAF;
   color: white;
   width: 140px;
 }
+header .main-menu .flex-center .item__name:hover {
+  color: #387FAF;
+}
+header .main-menu .flex-center li:first-child:hover ul {
+  display: block;
+}  
 
 /* 프로모션 */
 .promotion {
@@ -174,7 +171,6 @@ header .main-menu .flex-center ul li:hover {
 }
 .event .swiper-slide .event_text {
   position: absolute;
-  /* position: relative; */
   padding-top: 250px;
   padding-left: calc(100% / 5);
   width: 540px;
@@ -217,7 +213,6 @@ header .main-menu .flex-center ul li:hover {
   width: 170px;
   font-size: 20px;
   padding: 10px;
-  /* font-family: "Jua", sans-serif; */
   font-family: 'Ownglyph_meetme-Rg';
 }
 .event .swiper_event .btn_menu .btn__menu:hover {
@@ -233,7 +228,6 @@ header .main-menu .flex-center ul li:hover {
   height: 880px;
   background-color: #333;
   overflow: hidden; /* 영상 출력 넘치는 부분 숨기기 */
-
   /* 정가운데 배치 방법1 */
   display: flex;
   justify-content: center;

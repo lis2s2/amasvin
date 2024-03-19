@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고객문의</title>
+  <!-- 스타일 초기화 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+  <!-- 글꼴 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+  <!-- 구글 머티리얼 아이콘: 구글에서 제공하는 머티리얼 스타일의 아이콘, 글자처럼 취급 가능한 장점 -->
+  <!-- 그 외 fontawesome, bootstrap icon 등 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+  <!-- SWIPER CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="/CSS/main.css">
+
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- GSAP -->
+  <!-- 순서 주의(main.js에서 사용하니까 더 앞에) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+body {
+  /* 기본(공통) 스타일 */
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #333;
+}
+img{
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px 0; */
+
+}header {
+  background-color: white;
+  /* max-width: 1100px; */
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  /* box-sizing: border-box; */
+}
+header .flex-center {
+  margin-left: 20px;
+}
+header .flex-center li {
+  /* flex: 1; */
+}
+header .flex-center a {
+  /* width: 100%; */
+  padding: 40px 50px;
+}
+header .flex-center a.logo {
+  padding: 22px 50px;
+}
+header .flex-center img.snsic {
+  /* display: flex; */
+  margin: 0 5px;
+}
+header .flex-center img.snsic:hover  {
+  cursor: url('../img/ribon.png')32 32, auto;
+}
+
+/* 메인메뉴 */
+header .main-menu {
+  display: flex; 
+  z-index: 1;
+  position: relative; 
+  /* font-family: "Jua", sans-serif; */
+  font-size: 18px;
+  font-weight: bolder;
+}
+header .main-menu a {
+  word-break: keep-all;
+}
+header .main-menu .flex-center .item__name ul li {
+  display: block;
+  padding: 0 10px 20px;
+  color: #000;
+  box-sizing: border-box;
+}
+header .main-menu  .flex-center ul {
+  position: fixed;
+  display: none;
+  text-align: center;
+  width: 140px;
+  background-color: white;
+  margin-top: 37px;
+  margin-left: 15px;
+  font-size: 14px;
+}
+header .main-menu .flex-center ul > li {
+  padding: 14px 0;
+}
+header .main-menu .flex-center li:first-child:hover ul {
+  display: block;
+}  
+header .main-menu .flex-center .item__name:hover {
+  color: #387FAF;
+}
+header .main-menu .flex-center ul li:hover {
+  background-color: #387FAF;
+  color: white;
+  width: 140px;
+}
+
+.main_banner {
+  background-color: lightyellow;
+  width: 100%;
+  height: 250px;
+  position: relative;
+  font-family: 'Ownglyph_meetme-Rg';
+}
+.main_banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  font-size: 30px;
+}
+.main_banner p {
+  position: absolute;
+  top: 75%;
+  left: 44%;
+  font-size: 20px;
+}
+.box {
+  background-color: lightblue;
+  width: 900px;
+  height: 1467px;
+  padding: 30px 50px;
+  border: 1px solid black;
+  margin: 0 auto;
+  /* position: relative; */
+  left: 13.5%;
+  border-radius: 20px;
+  border-style: none;
+}
+.box .numnum {
+  margin-bottom: 35px;
+}
+.box .num {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.box .num1 {
+  margin-top: 10px;
+}
+.box .num_1 {
+  width: 100%;
+  height: 32px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 10px;
+}
+.box #sum {
+  height: 152px;
+  border-radius: 10px;
+  width: 100%; 
+  border: 1px solid black;
+  /* resize: none; */
+}
+.box .btn {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 600;
+}
+.box .btn:hover {
+  background-color: black;
+  color: white;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="flex-center">
+      <!-- 왼쪽 상단 로고 -->
+      <a href="./index.html" class="logo">
+        <img src="./img/main_logo.png" alt="amaSvin">
+      </a>
+    </div>
+
+    <!-- 메인메뉴 -->
+    <nav class="main-menu">
+      <ul class="flex-center">
+        <li>
+          <a href="javascript:void(0)" class="item__name">BRAND</a>
+          <ul>
+            <li>BI</li>
+            <li>재료</li>
+            <li>캐릭터</li>
+          </ul>
+        </li>
+      <li>
+        <a href="javascript:void(0)" class="item__name">MENU</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="item__name">MEMBERSHIP</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="item__name">가맹문의</a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="item__name">고객문의</a>
+      </li>
+      </ul>
+    
+    <!-- 오른쪽 상단 sns -->
+    <div class="flex-center">
+      <img src="./img/sns_ic1.png" alt="" class="snsic">
+      <img src="./img/sns_ic2.png" alt="" class="snsic">
+      <img src="./img/sns_ic3.png" alt="" class="snsic">
+      <img src="./img/sns_ic4.png" alt="" class="snsic">
+    </div>
+    </nav>
+  </header>
+
+  <nav>
+    <div class="main_banner">
+      <h1>고객문의</h1>
+      <p>고객님의 의견을 소중히 생각합니다.</p>
+    </div>
+  </nav>
+
+  <div class="box">
+      <div class="num">
+        <h2>고객문의</h2> <p><span style="color: red;">*</span>항목은 필수 입력 사항입니다.</p>
+      </div>
+      
+      <div class="numnum">
+        <span class="numname" style="color: red;">*</span>구분
+        <br>
+        <label for="a">
+          <input type="radio" name="num_num" class="num1" id="a">칭찬
+        </label>
+        <label for="b">
+          <input type="radio" name="num_num" class="num1" id="b">불만
+        </label>
+        <label for="c">
+          <input type="radio" name="num_num" class="num1" id="c">제안
+        </label>
+        <label for="d">
+          <input type="radio" name="num_num" class="num1" id="d">기타(내용 기재)
+        </label>
+        <br>
+        <input type="text" placeholder="기타내용" class="num_1">
+      </div>
+
+      <div class="numnum">
+        <span class="numname" style="color: red;">*</span>성명
+        <input type="text" placeholder="홍길동" class="num_1">
+      </div>
+
+      <div class="numnum">
+        <span class="numname" style="color: red;">*</span>휴대폰번호
+        <br>
+        <select id="number" class="num_1" style="width: 30%;">
+          <option value="" class="num_1">선택</option>
+          <option value="naver" class="num_1">010</option>
+          <option value="google" class="num_1">017</option>
+          <option value="daum" class="num_1">017</option>
+          <option value="self" class="num_1">011</option>
+        </select>
+        <span>ㅡ</span>
+        <input type="text" class="num_1" style="width: 30%;">
+        <span>ㅡ</span>
+        <input type="text" class="num_1" style="width: 30%;">
+        <!-- <input type="text" placeholder="선택" class="num_1"> -->
+      </div>
+
+      <div class="numnum">
+        <span class="numname" style="color: red;">*</span>E-mail
+        <br>
+        <input type="text" placeholder="" class="num_1" style="width: 50%;">
+        <span>@</span>
+        <select id="email" class="num_1" style="width: 45%;">
+          <option value="" class="num_1">선택</option>
+          <option value="naver" class="num_1">naver.com</option>
+          <option value="google" class="num_1">google.com</option>
+          <option value="daum" class="num_1">daum.net</option>
+          <option value="self" class="num_1">직접입력</option>
+        </select>
+      </div>
+
+      <div class="numnum">
+        <span class="numname" style="color: red;">*</span>매장명
+        <input type="text" placeholder="" class="num_1">
+      </div>
+      <div class="numnum">
+        <span class="numname" style="color: red;">*</span>내용
+        <br>
+        <textarea id="sum" cols="30" rows="6" style="resize: none;"></textarea>
+        <!-- <input type="text" placeholder="" class="num_1" id="sum"> -->
+      </div>
+      <div class="numnum">
+        <label for="visittime">방문일자/시간:</label>
+        <input type="datetime-local" id="visittime" class="num_1">
+      </div>
+      <div class="numnum">
+        <label for="visittime">메뉴명/당도/사이즈/얼음양/펄종류</label>
+        <br>
+        <textarea id="sum" cols="30" rows="6" style="resize: none;"></textarea>
+        <!-- <input type="text" placeholder="" class="num_1" id="sum"> -->
+      </div>
+
+      <div class="numnum">
+        <label for="myfile">파일 선택:</label>
+        <br>
+        <input type="file" id="myfile">
+      </div>
+
+      <div class="numnum">
+        <span class="numname" style="color: red;">*</span>답변회신여부
+        <br>
+        <label for="e">
+          <input type="radio" name="num_way" class="num1" id="e">문자
+        </label>
+        <label for="f">
+          <input type="radio" name="num_way" class="num1" id="f">전화
+        </label>
+        <label for="g">
+          <input type="radio" name="num_way" class="num1" style="margin-bottom: 35px;" id="g">회신 비희망
+        </label>
+        
+      <div class="numnum">
+        <label>
+          <input type="checkbox" style="margin-bottom: 20px;"> 개인정보제공 및 활용에 대한 동의
+          <br><span>원활한 서비스 제공을 위해 필요한 최소한의 개인정보를 수집하고 있습니다. 1.개인정보의 수집 및 이용 목적 고객 상담 서비스 제공을 위한 본인 식별, 상담 내용 전달 및 기타 원활한 양질의 서비스 제공을 위해 아래와 같은 개인정보를 수집하고 있습니다. 2.수집하는 개인정보의 항목[필수] 이름[한글/한문/영문], 이메일, 휴대폰번호, 3.수집방법 고객의 소리 작성 4.개인정보의 보유 및 이용시간 개인정보의 수집목적 또는 제공받은 목적 달성 시 내규에 준하여 보관 및 파기합니다.</span>
+        </label>
+      </div>
+
+      <div class="numnum">
+        <button type="button" class="btn">접수하기</button>
+      </div>
+      </div>
+        <!-- <li><input type="radio" name="numnum" id="num1">
+        <label for="num1">칭찬</label></li>
+        <li><input type="radio" name="numnum" id="num2">
+        <label for="num2">불만</label></li>
+        <li><input type="radio" name="numnum" id="num3">
+        <label for="num3">제안</label></li>
+        <li><input type="radio" name="numnum" id="num4">
+        <label for="num4">기타(내용 기재)</label></li> -->
+
+    
+  </div>
+  
+
+  
+</body>
+</html>
