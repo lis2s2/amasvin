@@ -152,7 +152,7 @@ header .main-menu .flex-center ul li:hover {
 .box {
   background-color: lightblue;
   width: 900px;
-  height: 1467px;
+  height: auto;
   padding: 30px 50px;
   border: 1px solid black;
   margin: 30px auto;
@@ -160,6 +160,7 @@ header .main-menu .flex-center ul li:hover {
   left: 13.5%;
   border-radius: 20px;
   border-style: none;
+  box-sizing: border-box;
 }
 .box .numnum {
   margin-bottom: 35px;
@@ -180,7 +181,7 @@ header .main-menu .flex-center ul li:hover {
   margin-top: 5px;
   border-radius: 10px;
   border: 1px solid black;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 .box #sum {
   height: 152px;
@@ -258,7 +259,9 @@ header .main-menu .flex-center ul li:hover {
 
   <div class="box">
       <div class="num">
-        <h2>고객문의</h2> <p><span style="color: red;">*</span>항목은 필수 입력 사항입니다.</p>
+
+        <h2>고객문의</h2> 
+        <p style="font-size: 13px;"><span style="color: red;">*</span>항목은 필수 입력 사항입니다.</p>
       </div>
       
       <div class="numnum">
@@ -286,34 +289,42 @@ header .main-menu .flex-center ul li:hover {
       </div>
 
       <div class="numnum">
-        <span class="numname" style="color: red;">*</span>휴대폰번호
+          <span class="numname" style="color: red;">*</span>휴대폰번호
         <br>
-        <select id="number" class="num_1" style="width: 30%; height: 36px;">
-          <option value="" class="num_1">선택</option>
-          <option value="naver" class="num_1">010</option>
-          <option value="google" class="num_1">017</option>
-          <option value="daum" class="num_1">017</option>
-          <option value="self" class="num_1">011</option>
-        </select>
-        <span>ㅡ</span>
-        <input type="text" class="num_1" style="width: 30%;">
-        <span>ㅡ</span>
-        <input type="text" class="num_1" style="width: 30%;">
-        <!-- <input type="text" placeholder="선택" class="num_1"> -->
+        <div style="display: flex; justify-content: space-between;">
+            <select id="number" class="num_1" style="height: 36px; flex: 1;">
+              <option value="" class="num_1">선택</option>
+              <option value="010" class="num_1">010</option>
+              <option value="017" class="num_1">017</option>
+              <option value="011" class="num_1">011</option>
+            </select>
+          <span style="padding: 10px;">-</span>
+          <div style="flex: 1;">
+            <input type="text" class="num_1">
+          </div>
+          <span style="padding: 10px;">-</span>
+          <div style="flex: 1;">
+            <input type="text" class="num_1">
+          </div>
+        </div>
       </div>
 
       <div class="numnum">
         <span class="numname" style="color: red;">*</span>E-mail
         <br>
-        <input type="text" placeholder="" class="num_1" style="width: 50%;">
-        <span>@</span>
-        <select id="email" class="num_1" style="width: 45%; height: 36px;" >
-          <option value="" class="num_1">선택</option>
-          <option value="naver" class="num_1">naver.com</option>
-          <option value="google" class="num_1">google.com</option>
-          <option value="daum" class="num_1">daum.net</option>
-          <option value="self" class="num_1">직접입력</option>
-        </select>
+        <div style="display: flex; justify-content: space-between;">
+          <div style="flex: 1;">
+            <input type="text" placeholder="" class="num_1">
+          </div>
+          <span style="padding: 10px;">@</span>
+          <select id="email" class="num_1" style="flex: 1; height: 36px;">
+            <option value="" class="num_1">선택</option>
+            <option value="naver" class="num_1">naver.com</option>
+            <option value="google" class="num_1">google.com</option>
+            <option value="daum" class="num_1">daum.net</option>
+            <!-- <option value="self" class="num_1">직접입력</option> -->
+          </select>
+        </div>
       </div>
 
       <div class="numnum">
@@ -367,19 +378,10 @@ header .main-menu .flex-center ul li:hover {
         <button type="button" class="btn">접수하기</button>
       </div>
       </div>
-        <!-- <li><input type="radio" name="numnum" id="num1">
-        <label for="num1">칭찬</label></li>
-        <li><input type="radio" name="numnum" id="num2">
-        <label for="num2">불만</label></li>
-        <li><input type="radio" name="numnum" id="num3">
-        <label for="num3">제안</label></li>
-        <li><input type="radio" name="numnum" id="num4">
-        <label for="num4">기타(내용 기재)</label></li> -->
-
     
   </div>
-  
-
-  
 </body>
 </html>
+
+<!-- '-' & '@' 간격 -->
+<!-- 이메일 옵션 인풋 가로 길어 -->
