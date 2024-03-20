@@ -42,9 +42,6 @@ header {
 header .flex-center {
   margin-left: 20px;
 }
-header .flex-center li {
-  /* flex: 1; */
-}
 header .flex-center a {
   /* width: 100%; */
   padding: 40px 50px;
@@ -270,24 +267,6 @@ header .main-menu .flex-center li:first-child:hover ul {
   top: 27%;
   left: 42%;
 }
-/* .delivery .del_button {
-  position: absolute;
-  bottom: 18%;
-  left: 35%;
-}
-.delivery .del_btn {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  padding: 25px 10px;
-  border-radius: 50px;
-  background-color: lightpink;
-  color: black;
-  border: 2px solid rgb(240, 173, 184);
-  box-sizing: border-box;
-  width: 200px;
-  cursor: pointer;
-} */
 .delivery .best_menu {
   position: absolute;
   display: flex;
@@ -342,36 +321,6 @@ header .main-menu .flex-center li:first-child:hover ul {
 .best .swiper .swiper-pagination-bullet-active {
   background-color: pink;
 }
-/* .best .swiper-button-prev,
-.best .swiper-button-next {
-  width: 42px;
-  height: 42px;
-  border: 2px solid pink;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-  color: pink;
-  transition: 0.2s;
-} */
-/* .best .swiper-button-prev {
-  left: 50%;
-  margin-left: -50px;
-  margin-top: 30px;
-}
-.best .swiper-button-next {
-  right: 50%;
-  margin-right: -50px;
-  margin-top: 30px;
-} */
-/* .best .swiper-button-prev:hover,
-.best .swiper-button-next:hover {
-  background-color: pink;
-  color: #fff;
-} */
-/* .best .swiper-button-prev::after,
-.best .swiper-button-next::after {
-  display: none;
-} */
 
 /* FOOTER */
 footer {
@@ -401,14 +350,14 @@ footer .info p {
 footer .info span {
   margin-left: 25px;
 }
+footer .info .lofo {
+  margin: 30px auto 0;
+}
 footer .copyright {
   color: #CBCBCB;
   font-size: 12px;
   text-align: center;
   padding-bottom: 50px;
-}
-footer .info .lofo {
-  margin: 30px auto 0;
 }
 
 /* 가맹문의 ic */
@@ -518,10 +467,3 @@ footer .info .lofo {
     bottom: 40px;
   }
 }
-
-/* 태블릿 */
-/* @media screem and (min-width: 768px) {
-  header {
-    width: 100%;
-  }
-} */
