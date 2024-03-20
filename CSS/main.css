@@ -460,25 +460,30 @@ footer .info .lofo {
   .promotion .swiper-slide .banner_text {
     position: absolute;
     left: 7%;
+    bottom: 230px;
   }
   .event {
     /* left: 0%; */
     position: relative;
   }
-  .event .swiper_event .swiper-wrapper .event_text {
+  .event .swiper-slide .event_text {
     position: absolute;
-    left: -10%;
+    padding: 0;
+    left: 78px;
+    padding-top: 55px;
+    width: 540px;
+    font-family: "Jua", sans-serif;
   }
   .event .swiper_event .swiper-wrapper .event_img {
-    width: 200px;
     position: absolute;
-    /* display: none; */
+    width: 200px;
+    top: 80px;
+    left: -20px;
   }
   .event .swiper_event .swiper-wrapper .btn__menu {
     position: absolute;
-    bottom: 10px;   
-    /* margin: 0 64px; */
-    right: -67%;
+    left: 430px;
+    top: 220px;
   }
   .delivery .del_bg {
     position: absolute;
@@ -501,8 +506,8 @@ footer .info .lofo {
   }
   #modal {
     position: fixed;
-    left: 10%;
-    width: 80%;
+    left: 3%;
+    width: 30%;
     background-size: contain;
     background-repeat: no-repeat;
   }
