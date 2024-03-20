@@ -108,10 +108,9 @@ header .main-menu .flex-center li:first-child:hover ul {
   background-color: #f6f5ef;
   position: relative; /* 페이지네이션 요소 배치를 위해  */
   transition: height 0.3s;
-  margin-top: 100px;
+  padding-top: 100px;
 }
 .promotion img {
-  /* margin-top: 90px; */
   width: 100%;
   height: 880px;
 }
