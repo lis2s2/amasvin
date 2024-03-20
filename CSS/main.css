@@ -448,7 +448,10 @@ footer .info .lofo {
 /* 모바일 */
 @media screen and (max-width: 767px) {
   header .logo {
-    margin-left: 40px;
+    /* margin-left: 0; */
+    /* margin: 0 auto; */
+    position: relative;
+    right: 110%;
   }
   header .main-menu a,
   header .snsic {
@@ -459,21 +462,23 @@ footer .info .lofo {
     left: 7%;
   }
   .event {
-    left: 0%;
+    /* left: 0%; */
+    position: relative;
   }
-  .event .event_text {
+  .event .swiper_event .swiper-wrapper .event_text {
     position: absolute;
-    /* left: 10%; */
-    margin: 0 5px;
+    left: -10%;
   }
-  .event .swiper_event .swiper-wrapper img {
-    /* width: 250px; */
-    display: none;
+  .event .swiper_event .swiper-wrapper .event_img {
+    width: 200px;
+    position: absolute;
+    /* display: none; */
   }
   .event .swiper_event .swiper-wrapper .btn__menu {
     position: absolute;
-    bottom: 0px;   
-    margin: 0 64px;
+    bottom: 10px;   
+    /* margin: 0 64px; */
+    right: -67%;
   }
   .delivery .del_bg {
     position: absolute;
