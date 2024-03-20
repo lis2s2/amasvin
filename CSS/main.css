@@ -478,12 +478,15 @@ footer .info .lofo {
   }
   .delivery .del_bg {
     position: absolute;
-    left: 4%;
+    left: 20%;
   }
   .delivery .del_1,
   .delivery .del_2,
   .delivery .del_3 {
     display: none;
+  }
+  .delivery .best_menu {
+    left: 42%;
   }
   .best img {
     width: 40%;
