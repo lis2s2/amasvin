@@ -162,11 +162,45 @@ button {
   animation-iteration-count: 3;
 }
 
-/* @keyframes turn {
-  0% { transform: rotateY(0deg); }
-  25% { transform: rotateY(-15deg); }
-  100% { transform: rotateY(45deg); }
-} */
+/* FOOTER */
+footer {
+  background-color: #313131;
+  border-top: 1px solid #333;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid black;
+  margin-top: 280px;
+
+}
+footer .info {
+  margin-top: 10px;
+  text-align: center;
+}
+footer .info img {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+footer .info p {
+  color: #CBCBCB;
+  font-size: 12px;
+  padding: 5px 0;
+  text-align: center;
+}
+footer .info span {
+  margin-left: 25px;
+}
+footer .copyright {
+  color: #CBCBCB;
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+footer .info .lofo {
+  margin: 30px auto 0;
+}
 
   </style>
 </head>
@@ -200,7 +234,7 @@ button {
         <a href="javascript:void(0)" class="item__name">가맹문의</a>
       </li>
       <li>
-        <a href="javascript:void(0)" class="item__name">고객문의</a>
+        <a href="./index3.html" class="item__name">고객문의</a>
       </li>
       </ul>
     
@@ -238,6 +272,26 @@ button {
       </a>
     </label>
   </div>
+
+  <footer>
+    <div class="info">
+      <img src="./img/footer_logo.png" alt="" class="logo">
+      <p>전국 가맹문의:1221-1221
+        <span>서울,경기,충청도 가맹문의:1221-1221</span>
+      </p>
+      <p>사업자등록번호 111-11-1111
+        <span>(주)lis2s2 대표이사 이수현</span>
+        <span>그린컴퓨터학원 인천구월점</span>
+      </p>
+      <p>TEL: 1221-1221
+        <span>bubblejoa@naver.com</span>
+      </p>
+    </div>
+    <div class="copyright">
+      &copy; <span class="this"></span>
+      BKC CO.LTD ALL Rights Reserved
+    </div>
+  </footer>
 
 <script>
   // gsap.to(요소, 지속시간, 옵션: {})
